@@ -1,0 +1,54 @@
+{
+  "common": {
+    "home": "الرئيسية",
+    "dashboard": "لوحة التحكم",
+    "login": "تسجيل الدخول",
+    "login_page": "صفحة الدخول",
+    "signup": "إنشاء حساب",
+    "welcome": "مرحبًا بك في قالب Next.js",
+    "description": "قالب بداية حديث متعدد اللغات لـ Next.js مع العديد من الميزات المدمجة",
+    "settings": "الإعدادات",
+    "theme": "المظهر",
+    "locale": "اللغة",
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+    "getting_started": "البدء",
+    "back_home": "العودة للرئيسية",
+    "current_locale": "اللغة الحالية",
+    "logout": "تسجيل الخروج",
+    "profile": "الملف الشخصي"
+  },
+  "theme": {
+    "light": "فاتح",
+    "dark": "داكن",
+    "system": "النظام"
+  },
+  "network": {
+    "online": "تم استعادة الاتصال بالانترنت",
+    "offline": "أنت غير متصل بالإنترنت."
+  },
+  "auth": {
+    "login": "تسجيل الدخول إلى حسابك",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "noAccount": "ليس لديك حساب؟",
+    "signUp": "إنشاء حساب"
+  },
+  "dashboard": {
+    "welcome": "مرحباً بك في لوحة التحكم",
+    "dashboardSummary": "إليك نظرة عامة على تقدمك في التعلم والأنشطة",
+    "stats": "الإحصائيات",
+    "recentActivity": "النشاط الأخير",
+    "user": "المستخدم",
+    "totalCourses": "إجمالي الدورات",
+    "completed": "مكتملة",
+    "inProgress": "قيد التقدم"
+  },
+  "error": {
+    "generic": "حدث خطأ ما",
+    "notFound": "الصفحة غير موجودة",
+    "unauthorized": "وصول غير مصرح به",
+    "network": "حدث خطأ في الشبكة"
+  }
+}

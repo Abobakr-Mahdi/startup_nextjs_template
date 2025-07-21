@@ -1,0 +1,54 @@
+{
+  "common": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "login": "Login",
+    "login_page": "Login Page",
+    "signup": "Sign Up",
+    "welcome": "Welcome to Next.js startup Template",
+    "description": "A modern internationalized Next.js starter template with many features built-in",
+    "settings": "Settings",
+    "theme": "Theme",
+    "locale": "Language",
+    "english": "English",
+    "arabic": "Arabic",
+    "getting_started": "Getting Started",
+    "back_home": "Back to Home",
+    "current_locale": "Current Language",
+    "logout": "Logout",
+    "profile": "Profile"
+  },
+  "auth": {
+    "login": "Login to your account",
+    "email": "Email address",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up"
+  },
+  "dashboard": {
+    "welcome": "Welcome to your dashboard",
+    "dashboardSummary": "Here's an overview of your learning progress and activities",
+    "stats": "Statistics",
+    "recentActivity": "Recent Activity",
+    "user": "User",
+    "totalCourses": "Total Courses",
+    "completed": "Completed",
+    "inProgress": "In Progress"
+  },
+  "error": {
+    "generic": "Something went wrong",
+    "notFound": "Page not found",
+    "unauthorized": "Unauthorized access",
+    "network": "Network error occurred"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "network": {
+    "online": "Back Online",
+    "offline": "You are currently offline"
+  }
+}
