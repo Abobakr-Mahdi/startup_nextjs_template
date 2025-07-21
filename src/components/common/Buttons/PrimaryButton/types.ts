@@ -1,9 +1,10 @@
+import { HTMLMotionProps } from "framer-motion";
+
 type ButtonVariant = "primary" | "secondary" | "danger" | "success";
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  extends Omit<HTMLMotionProps<"button">, "children"> {
   isLoading: boolean;
   variant: ButtonVariant;
   children: React.ReactNode;
-  props?: React.ButtonHTMLAttributes<HTMLButtonElement>;
 }

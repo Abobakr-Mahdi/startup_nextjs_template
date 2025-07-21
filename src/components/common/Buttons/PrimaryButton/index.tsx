@@ -5,10 +5,26 @@ import { cn } from "@/lib/utils";
 
 export default function PrimaryButton({
   isLoading,
-  variant,
+  variant = "primary",
   children,
+  className,
   ...props
 }: ButtonProps) {
+  const getVariantStyles = () => {
+    switch (variant) {
+      case "primary":
+        return "bg-primary-500";
+      case "secondary":
+        return "bg-secondary-500";
+      case "danger":
+        return "bg-red-500";
+      case "success":
+        return "bg-green-500";
+      default:
+        return "bg-primary-500";
+    }
+  };
+
   return (
     <motion.button
       {...props}
@@ -16,9 +32,8 @@ export default function PrimaryButton({
       whileTap={{ scale: 0.95 }}
       className={cn(
         "text-white px-4 py-2 rounded-md",
-        variant === "primary" ? "bg-primary-500" : "bg-secondary-500",
-        variant === "danger" ? "bg-red-500" : "bg-green-500",
-        variant === "success" ? "bg-green-500" : "bg-red-500"
+        getVariantStyles(),
+        className
       )}
     >
       {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : children}
