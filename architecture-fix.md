@@ -94,4 +94,4 @@ When developing new features:
    - Component lifecycle handling
    - Consumption of services
 
-This approach creates a cleaner architecture that's easier to maintain and evolve. 
+This approach creates a cleaner architecture that's easier to maintain and evolve.
