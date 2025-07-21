@@ -95,4 +95,4 @@ This document outlines the refactoring performed on the application to enhance i
 4. **Performance Optimization**
    - Implement code splitting for features
    - Optimize bundle size
-   - Add advanced caching strategies 
+   - Add advanced caching strategies
