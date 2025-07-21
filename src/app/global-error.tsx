@@ -1,9 +1,6 @@
 "use client";
 
-import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-
-const inter = Inter({ subsets: ["latin", "latin-ext"] });
 
 export default function GlobalError({
   error,
@@ -13,7 +10,7 @@ export default function GlobalError({
   reset: () => void;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en">
       <body>
         <div className="flex flex-col items-center justify-center min-h-screen px-4 text-center">
           <h1 className="text-6xl font-bold text-destructive">Error</h1>

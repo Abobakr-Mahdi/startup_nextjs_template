@@ -3,17 +3,16 @@
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { LoginCredentials, useAuth } from "@/features/auth";
 import { QUERY_STATE_MANAGERS } from "@/constants";
 import { appRoutes } from "@/routes";
 
-export default function Login() {
+// Separate component for handling search params
+function LoginForm() {
   const t = useTranslations("auth");
   const router = useRouter();
   const searchParams = useSearchParams();
-
-  // Use the consolidated auth hook
   const { login, isLoading, error: authError, clearError } = useAuth();
 
   const [formData, setFormData] = useState<LoginCredentials>({
@@ -23,14 +22,12 @@ export default function Login() {
   });
   const [formError, setFormError] = useState("");
 
-  // Clear form error when auth error changes
   useEffect(() => {
     if (authError) {
       setFormError(authError);
     }
   }, [authError]);
 
-  // Get callbackUrl from URL query params
   const callbackUrl =
     searchParams?.get(QUERY_STATE_MANAGERS.CALLBACK_URL) || appRoutes.HOME.path;
 
@@ -41,7 +38,6 @@ export default function Login() {
       [name]: type === "checkbox" ? checked : value,
     }));
 
-    // Clear errors when user starts typing
     if (formError) {
       setFormError("");
       clearError();
@@ -53,17 +49,11 @@ export default function Login() {
     setFormError("");
 
     try {
-      // Login with our consolidated auth hook
       await login(formData);
-
-      // Use replace instead of push to prevent back button issues
-      // and redirect to callbackUrl if provided
       router.replace(
         callbackUrl ? decodeURIComponent(callbackUrl) : appRoutes.HOME.path
       );
     } catch (error) {
-      // Error is handled by the useAuth hook
-      // We just need to display it
       console.error("Login submission error:", error);
     }
   };
@@ -143,5 +133,14 @@ export default function Login() {
         </Link>
       </div>
     </div>
+  );
+}
+
+// Main component with Suspense boundary
+export default function Login() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LoginForm />
+    </Suspense>
   );
 }
