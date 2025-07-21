@@ -53,6 +53,7 @@ return {
 ```
 
 This approach:
+
 1. Reduces state duplication
 2. Ensures loading states can't get out of sync
 3. Provides more context about what's actually loading
@@ -138,4 +139,4 @@ function UserProfile() {
 }
 ```
 
-By following this pattern, we create a more intuitive API for developers while maintaining a clean separation between concerns. 
+By following this pattern, we create a more intuitive API for developers while maintaining a clean separation between concerns.
